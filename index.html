@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101820" />
+    <meta
+      name="description"
+      content="ReperTone organiza repertorios musicais com tons, cifras, arquivos proprios e modo palco."
+    />
+    <title>ReperTone</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/icon.svg" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="assets/repertone-logo-data.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <noscript>O ReperTone precisa de JavaScript para funcionar.</noscript>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <section id="loginScreen" class="login-screen">
+      <div class="login-panel">
+        <div class="brand-stack">
+          <img src="assets/icon.svg" alt="ReperTone" class="login-logo" data-logo />
+          <p class="slogan">Seu repertório no tom certo.</p>
+        </div>
+
+        <form id="loginForm" class="login-form">
+          <label>
+            <span>E-mail</span>
+            <input type="email" name="email" autocomplete="email" value="coordenador@repertone.app" required />
+          </label>
+          <label>
+            <span>Senha</span>
+            <input type="password" name="password" autocomplete="current-password" value="repertone" required />
+          </label>
+          <button class="btn primary full" type="submit" title="Entrar">
+            <span data-icon="log-in"></span>
+            Entrar
+          </button>
+        </form>
+
+        <div class="login-actions">
+          <button class="text-btn" type="button">Criar conta</button>
+          <button class="text-btn" type="button">Esqueci minha senha</button>
+        </div>
+      </div>
+
+      <div class="login-preview" aria-hidden="true">
+        <div class="preview-header">
+          <span>Evento confirmado</span>
+          <strong>Ensaio geral</strong>
+        </div>
+        <div class="preview-song">
+          <span>01</span>
+          <div>
+            <strong>Canção da Jornada</strong>
+            <small>Tom A - Marina</small>
+          </div>
+        </div>
+        <div class="preview-song">
+          <span>02</span>
+          <div>
+            <strong>Luz do Caminho</strong>
+            <small>Tom E - Rafael</small>
+          </div>
+        </div>
+        <div class="preview-stage">Modo Palco pronto</div>
+      </div>
+    </section>
+
+    <section id="appShell" class="shell is-hidden">
+      <aside class="sidebar">
+        <a class="brand-link" href="#dashboard" aria-label="ReperTone">
+          <img src="assets/icon.svg" alt="" data-logo />
+        </a>
+        <nav class="side-nav" aria-label="Navegação principal">
+          <button class="nav-btn is-active" type="button" data-view="dashboard">
+            <span data-icon="layout-dashboard"></span>
+            <span>Dashboard</span>
+          </button>
+          <button class="nav-btn" type="button" data-view="teams">
+            <span data-icon="users"></span>
+            <span>Equipes</span>
+          </button>
+          <button class="nav-btn" type="button" data-view="events">
+            <span data-icon="calendar"></span>
+            <span>Eventos</span>
+          </button>
+          <button class="nav-btn" type="button" data-view="repertoire">
+            <span data-icon="music"></span>
+            <span>Repertório</span>
+          </button>
+          <button class="nav-btn" type="button" data-view="musician">
+            <span data-icon="smartphone"></span>
+            <span>Músico</span>
+          </button>
+          <button class="nav-btn" type="button" data-view="stage">
+            <span data-icon="monitor"></span>
+            <span>Palco</span>
+          </button>
+          <button class="nav-btn" type="button" data-view="settings">
+            <span data-icon="settings"></span>
+            <span>Ajustes</span>
+          </button>
+        </nav>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <span class="eyebrow">ReperTone</span>
+            <h1 id="pageTitle">Dashboard</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-btn" type="button" id="shareTopBtn" title="Compartilhar repertório" aria-label="Compartilhar repertório">
+              <span data-icon="share"></span>
+            </button>
+            <button class="icon-btn" type="button" id="offlineTopBtn" title="Baixar para offline" aria-label="Baixar para offline">
+              <span data-icon="download"></span>
+            </button>
+            <button class="btn secondary" type="button" data-view-target="stage">
+              <span data-icon="monitor"></span>
+              Palco
+            </button>
+          </div>
+        </header>
+
+        <section id="viewRoot" class="view-root" aria-live="polite"></section>
+      </main>
+
+      <nav class="mobile-nav" aria-label="Navegação mobile">
+        <button class="mobile-nav-btn is-active" type="button" data-view="dashboard" title="Dashboard" aria-label="Dashboard">
+          <span data-icon="layout-dashboard"></span>
+        </button>
+        <button class="mobile-nav-btn" type="button" data-view="repertoire" title="Repertório" aria-label="Repertório">
+          <span data-icon="music"></span>
+        </button>
+        <button class="mobile-nav-btn" type="button" data-view="musician" title="Músico" aria-label="Músico">
+          <span data-icon="smartphone"></span>
+        </button>
+        <button class="mobile-nav-btn" type="button" data-view="stage" title="Palco" aria-label="Palco">
+          <span data-icon="monitor"></span>
+        </button>
+      </nav>
+    </section>
+  </body>
+</html>
