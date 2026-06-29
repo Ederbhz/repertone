@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="ReperTone">
+  <rect width="512" height="512" rx="96" fill="#101820"/>
+  <path d="M116 312V210h54v102h-54Zm76 0V168h54v144h-54Zm76 0V118h54v194h-54Z" fill="#007BFF"/>
+  <path d="M326 144v172a70 70 0 1 1-42-64V144h42Z" fill="#FF7A00"/>
+  <path d="M116 350c58 52 218 54 286-44" fill="none" stroke="#00AEEF" stroke-width="24" stroke-linecap="round"/>
+  <path d="M128 378c62 38 205 39 274-26" fill="none" stroke="#FF4F00" stroke-width="22" stroke-linecap="round"/>
+</svg>
